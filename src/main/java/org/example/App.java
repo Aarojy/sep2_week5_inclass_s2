@@ -1,23 +1,27 @@
 package org.example;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class App {
+    final public static Logger log = Logger.getLogger(App.class.getName());
+
     public static void main(String[] args) {
-        int userInput = askInteger();
+        final int userInput = askInteger();
         runLoop(userInput);
     }
 
     public static int askInteger() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Please enter an integer: ");
+        final Scanner input = new Scanner(System.in);
+        App.log.info("Please enter an integer:");
         int userInput = input.nextInt();
         return userInput;
     }
 
-    public static void runLoop(int n ) {
+    public static int runLoop(int n) {
         for (int i = 1; i <= n; i++) {
-            System.out.println("i = " + i);
+            App.log.info("i = " + i);
         }
+        return n;
     }
 }
