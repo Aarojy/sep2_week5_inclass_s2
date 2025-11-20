@@ -21,4 +21,13 @@ class AppTest {
     void runLoop() {
         assertEquals(App.runLoop(10), 10);
     }
+
+    @Test
+    void testMain() {
+        String simulatedInput = "42\n";
+        System.setIn(new ByteArrayInputStream(simulatedInput.getBytes()));
+
+        App app = new App();
+        app.main(new String[]{});
+    }
 }
