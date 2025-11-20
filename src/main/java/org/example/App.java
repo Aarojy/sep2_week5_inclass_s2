@@ -20,7 +20,7 @@ public class App {
 
     public static int runLoop(int n) {
         for (int i = 1; i <= n; i++) {
-            App.log.info("i = " + i);
+            App.log.info("j = " + i);
         }
         return n;
     }
