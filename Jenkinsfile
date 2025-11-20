@@ -36,6 +36,7 @@ pipeline {
                                 ${tool 'SonarScanner'}\\bin\\sonar-scanner ^
                                 -Dsonar.projectKey=devops-demo ^
                                 -Dsonar.sources=src/main/java ^
+                                -Dsonar.tests=src/test/java ^
                                 -Dsonar.projectName=DevOps-Demo ^
                                 -Dsonar.host.url=http://localhost:9000 ^
                                 -Dsonar.login=${env.SONAR_TOKEN} ^
